@@ -1,9 +1,10 @@
 //
-// Created by Jeremy on 12/11/2021.
+// Created by ApesStronk on 12/11/2021.
 //
 
 #include <iostream>
 #include <array>
+#include <cstdio>
 using namespace std;
 
 void solveDigitsSum(){
@@ -34,24 +35,53 @@ void solveDominoPiling(){
     cout << M * N / 2 << endl;
 }
 
-void solveVusTheCossackAndAContest(){
-    cout << "\nVus The Cossack and a Contest" << endl;
-    int M, N, K;
-    cin >> M >> N >> K;
-    if (M - N >= 0 && K - N >= 0)
+
+void solvePalindromicTimes(){
+    cout << "\nPalindromic Times" << endl;
+    int hh, mm;
+    scanf("%d:%d", &hh, &mm);
+    do
     {
-        cout << "\nYes";
-    } else 
+        ++mm;
+        if (mm == 60)
+        {
+            ++hh;
+            mm = 0;
+        }
+        if (hh == 24)
+        {
+            hh = 0;
+        }
+    } while (hh % 10 * 10 + hh / 10 != mm);
+    printf("%02d:%02d\n", hh, mm);
+}
+
+void solveWayTooLongWords() {
+    cout << "\nWay Too Long Words" << endl;
+    int n;
+    string s;
+    cin >> n;
+    while (n--)
     {
-        cout << "\nNo";
+        cin >> s;
+        if (s.length() > 10)
+        {
+            cout << s[0] << s.length() - 2 << s[s.length() - 1] << endl;
+        }
+        else
+        {
+            cout << s << endl;
+        }
     }
 }
+
 
 void displayUserChoices() {
     cout << "\n[CodeForces Problem Set by ApesStronk]\n"
             "1. Digits Sum\n"
             "2. Domino Piling\n"
-            "3. Vus The Cossack and a Contest\n"
+            "3. Palindromic Times\n"
+            "4. Way Too Long Words\n"
             "0. Exit Program.\n"
             "Your Choice:";
 }
@@ -62,9 +92,9 @@ void initiateUserChoice(int userChoice){
             break;
         case 2: solveDominoPiling();
             break;
-        case 3: solveVusTheCossackAndAContest();
+        case 3: solvePalindromicTimes();
             break;
-        case 4:
+        case 4: solveWayTooLongWords();
             break;
         case 5:
             break;
@@ -74,6 +104,7 @@ void initiateUserChoice(int userChoice){
             cout << "Invalid Input.";
     }
 }
+
 
 int main() {
     int userChoice;
