@@ -35,6 +35,7 @@ void solveDominoPiling(){
     cout << M * N / 2 << endl;
 }
 
+
 void solvePalindromicTimes(){
     cout << "\nPalindromic Times" << endl;
     int hh, mm;
@@ -73,7 +74,6 @@ void solveWayTooLongWords() {
         }
     }
 }
-
 
 
 void displayUserChoices() {
