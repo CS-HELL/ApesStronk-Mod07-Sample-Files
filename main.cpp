@@ -108,9 +108,9 @@ void initiateUserChoice(int userChoice){
             break;
         case 3: solvePalindromicTimes();
             break;
-        case 4: solveWayTooLongWords();
+        case 4: solveVusTheCossackAndAContest();
             break;
-        case 5: solveVusTheCossackAndAContest();
+        case 5: solveWayTooLongWords();
             break;
         case 0: cout << "Goodbye.";
             exit(3);
