@@ -34,13 +34,24 @@ void solveDominoPiling(){
     cout << M * N / 2 << endl;
 }
 
-
+void solveVusTheCossackAndAContest(){
+    cout << "\nVus The Cossack and a Contest" << endl;
+    int M, N, K;
+    cin >> M >> N >> K;
+    if (M - N >= 0 && K - N >= 0)
+    {
+        cout << "\nYes";
+    } else 
+    {
+        cout << "\nNo";
+    }
+}
 
 void displayUserChoices() {
     cout << "\n[CodeForces Problem Set by ApesStronk]\n"
             "1. Digits Sum\n"
             "2. Domino Piling\n"
-            "3. \n"
+            "3. Vus The Cossack and a Contest\n"
             "0. Exit Program.\n"
             "Your Choice:";
 }
@@ -51,7 +62,7 @@ void initiateUserChoice(int userChoice){
             break;
         case 2: solveDominoPiling();
             break;
-        case 3:
+        case 3: solveVusTheCossackAndAContest();
             break;
         case 4:
             break;
