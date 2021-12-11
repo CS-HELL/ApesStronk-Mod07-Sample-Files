@@ -1,9 +1,10 @@
 //
-// Created by Jeremy on 12/11/2021.
+// Created by ApesStronk on 12/11/2021.
 //
 
 #include <iostream>
 #include <array>
+#include <cstdio>
 using namespace std;
 
 void solveDigitsSum(){
@@ -34,22 +35,35 @@ void solveDominoPiling(){
     cout << M * N / 2 << endl;
 }
 
+void solvePalindromicTimes(){
+    cout << "\nPalindromic Times" << endl;
+    int hh, mm;
+    scanf("%d:%d", &hh, &mm);
+    do
+    {
+        ++mm;
+        if (mm == 60)
+        {
+            ++hh;
+            mm = 0;
+        }
+        if (hh == 24)
+        {
+            hh = 0;
+        }
+    } while (hh % 10 * 10 + hh / 10 != mm);
+    printf("%02d:%02d\n", hh, mm);
+}
+
 
 
 void displayUserChoices() {
     cout << "\n[CodeForces Problem Set by ApesStronk]\n"
             "1. Digits Sum\n"
             "2. Domino Piling\n"
-            "3. \n"
+            "3. Palindromic Times\n"
             "0. Exit Program.\n"
             "Your Choice:";
-}
-
-void solveDominoPiling(){
-    cout << "\nDomino Piling" << endl;
-    int M, N;
-    cin >> M >> N;
-    cout << M * N / 2 << endl;
 }
 
 void initiateUserChoice(int userChoice){
@@ -58,7 +72,7 @@ void initiateUserChoice(int userChoice){
             break;
         case 2: solveDominoPiling();
             break;
-        case 3:
+        case 3: solvePalindromicTimes();
             break;
         case 4:
             break;
