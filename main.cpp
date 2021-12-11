@@ -105,6 +105,10 @@ void initiateUserChoice(int userChoice){
     }
 }
 
+void emptySampleMethod(){
+
+}
+
 
 int main() {
     int userChoice;
