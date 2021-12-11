@@ -45,6 +45,13 @@ void displayUserChoices() {
             "Your Choice:";
 }
 
+void solveDominoPiling(){
+    cout << "\nDomino Piling" << endl;
+    int M, N;
+    cin >> M >> N;
+    cout << M * N / 2 << endl;
+}
+
 void initiateUserChoice(int userChoice){
     switch(userChoice){
         case 1: solveDigitsSum();
@@ -63,6 +70,7 @@ void initiateUserChoice(int userChoice){
             cout << "Invalid Input.";
     }
 }
+
 
 int main() {
     int userChoice;
