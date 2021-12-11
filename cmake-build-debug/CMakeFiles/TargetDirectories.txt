@@ -1,0 +1,3 @@
+D:/3_1st_Sem/311/ApesStronk-Mod07-Sample-Files/cmake-build-debug/CMakeFiles/ApesStronk_Mod07_Sample_Files.dir
+D:/3_1st_Sem/311/ApesStronk-Mod07-Sample-Files/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/3_1st_Sem/311/ApesStronk-Mod07-Sample-Files/cmake-build-debug/CMakeFiles/rebuild_cache.dir
