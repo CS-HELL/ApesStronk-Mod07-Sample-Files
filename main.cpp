@@ -75,6 +75,19 @@ void solveWayTooLongWords() {
     }
 }
 
+void solveVusTheCossackAndAContest(){
+    cout << "\nVus The Cossack and a Contest" << endl;
+    int M, N, K;
+    cin >> M >> N >> K;
+    if (M - N >= 0 && K - N >= 0)
+    {
+        cout << "\nYes";
+    } else
+    {
+        cout << "\nNo";
+    }
+}
+
 
 void displayUserChoices() {
     cout << "\n[CodeForces Problem Set by ApesStronk]\n"
@@ -82,6 +95,7 @@ void displayUserChoices() {
             "2. Domino Piling\n"
             "3. Palindromic Times\n"
             "4. Way Too Long Words\n"
+            "5. Vus the Cossack and a Contest\n"
             "0. Exit Program.\n"
             "Your Choice:";
 }
@@ -96,7 +110,7 @@ void initiateUserChoice(int userChoice){
             break;
         case 4: solveWayTooLongWords();
             break;
-        case 5:
+        case 5: solveVusTheCossackAndAContest();
             break;
         case 0: cout << "Goodbye.";
             exit(3);
