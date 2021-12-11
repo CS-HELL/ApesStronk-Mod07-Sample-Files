@@ -55,6 +55,25 @@ void solvePalindromicTimes(){
     printf("%02d:%02d\n", hh, mm);
 }
 
+void solveWayTooLongWords() {
+    cout << "\nWay Too Long Words" << endl;
+    int n;
+    string s;
+    cin >> n;
+    while (n--)
+    {
+        cin >> s;
+        if (s.length() > 10)
+        {
+            cout << s[0] << s.length() - 2 << s[s.length() - 1] << endl;
+        }
+        else
+        {
+            cout << s << endl;
+        }
+    }
+}
+
 
 
 void displayUserChoices() {
@@ -62,6 +81,7 @@ void displayUserChoices() {
             "1. Digits Sum\n"
             "2. Domino Piling\n"
             "3. Palindromic Times\n"
+            "4. Way Too Long Words\n"
             "0. Exit Program.\n"
             "Your Choice:";
 }
@@ -74,7 +94,7 @@ void initiateUserChoice(int userChoice){
             break;
         case 3: solvePalindromicTimes();
             break;
-        case 4:
+        case 4: solveWayTooLongWords();
             break;
         case 5:
             break;
