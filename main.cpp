@@ -120,7 +120,7 @@ void initiateUserChoice(int userChoice){
 }
 
 void emptySampleMethod(){
-
+    helloIamAnError()
 }
 
 
